@@ -1,0 +1,53 @@
+
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 36pt;
+    color: #ebc334;
+
+}
+
+p{
+    font-size: 18pt;
+    color: rgb(132, 132, 128);
+}
+
+.card{
+    border: 0.3em solid rgb(132, 132, 128);
+    border-radius: 2em;
+    width: 70%;
+}
+
+.infoCard{
+    display: flex;
+    justify-content: space-around;
+    padding: 3em;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3em;
+}
+
+img{
+    width: 50%;
+    border-radius: 2em;
+}
+
+
+.youtube{
+display: flex;
+justify-content: center;
+padding-bottom: 3em;
+}
