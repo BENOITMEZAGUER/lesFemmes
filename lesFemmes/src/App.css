@@ -6,5 +6,16 @@
 }
 
 body {
-  background-color: lightblue;
+
+  background-color: wheat;
+  align-items: center;
 }
+
+h2{
+  font-family: "Playfair Display";
+}
+
+p{
+  font-family: "Dosis";
+}
+

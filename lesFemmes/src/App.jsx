@@ -1,6 +1,8 @@
 import { useState } from "react";
+
+
+import CardsList from "./components/CardsList";
 import "./App.css";
-import CardsList from "./components/CardList";
 function App() {
   const womenList = [
     {
