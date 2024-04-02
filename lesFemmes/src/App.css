@@ -6,6 +6,7 @@
 }
 
 body {
+
   background-color: wheat;
   align-items: center;
 }
@@ -17,3 +18,4 @@ h2{
 p{
   font-family: "Dosis";
 }
+
