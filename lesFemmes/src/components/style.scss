@@ -39,11 +39,15 @@ p{
     column-gap: 3em;
 }
 
-img{
+.image{
     width: 50%;
     border-radius: 2em;
 }
-
+.parts{
+    display: flex;
+    padding: 2em;
+    column-gap: 3em;
+}
 
 .youtube{
 display: flex;
