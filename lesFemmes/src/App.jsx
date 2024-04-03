@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   const [womenIndex, setWomenIndex] = useState(0);
-  console.log("woman index", womenIndex);
+
   const womenList = [
     {
       firstName: "Margot",
@@ -66,6 +66,7 @@ function App() {
         women={womenList[womenIndex]}
         setWomenIndex={setWomenIndex}
         womenIndex={womenIndex}
+        buttonSuivant={womenIndex < womenList.length - 1}
       />
     </>
   );
