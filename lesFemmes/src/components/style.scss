@@ -11,6 +11,7 @@ h2{
     text-align: center;
     font-size: 36pt;
     color: #ebc334;
+    margin: 0.5em;
 
 }
 
@@ -22,7 +23,10 @@ p{
 .card{
     border: 0.3em solid rgb(132, 132, 128);
     border-radius: 2em;
-    width: 70%;
+    width: 50em;
+    height: 70em;
+    background-color:#f9f6ea;
+    margin: 1em;
 }
 
 .infoCard{
@@ -54,4 +58,14 @@ display: flex;
 justify-content: center;
 padding-bottom: 3em;
 width: 80%;
+}
+
+.navBar {
+    display: flex;
+    background-color: #a28a36;
+}
+
+.navBar a {
+  padding: 1em;
+  color: black;
 }
