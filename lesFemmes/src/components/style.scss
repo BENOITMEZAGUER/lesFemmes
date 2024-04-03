@@ -19,14 +19,15 @@ p{
     font-size: 18pt;
     color: rgb(132, 132, 128);
 }
-
 .card{
     border: 0.3em solid rgb(132, 132, 128);
     border-radius: 2em;
-    width: 50em;
-    height: 70em;
+    width: auto;
+    height: auto;
     background-color:#f9f6ea;
     margin: 1em;
+    display: block;
+
 }
 
 .infoCard{
@@ -61,11 +62,22 @@ width: 80%;
 }
 
 .navBar {
-    display: flex;
+    display: flex; 
     background-color: #a28a36;
+    padding-left: 40em;
+    padding-right: 40em;
+    margin-top: -32px;
+    
 }
 
 .navBar a {
   padding: 1em;
   color: black;
+ 
+}
+.form{
+    padding: 1em
+}
+input {
+    font-size: 12pt;
 }

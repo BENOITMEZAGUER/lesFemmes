@@ -4,7 +4,7 @@ function CardsList({ womenList }) {
   return (
     <>
       {womenList.map((person) => (
-        <Cards women={person} />
+        <Cards women={person} key={`${person.lastName}-bis`} />
       ))}
     </>
   );

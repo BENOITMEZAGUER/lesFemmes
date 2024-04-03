@@ -1,10 +1,14 @@
 import Search from "./Search";
+import Cards from "./Cards";
 
-function NavBar() {
+function NavBar({ womenList, womenListFiltered, setWomenListFiltered }) {
   return (
     <div className="navBar">
-      <a href="#actrices">Les actrices</a>
-      <a href="#chanteuses">Les chanteuses</a>
+      <Search
+        arrayOfPeople={womenList}
+        womenListFiltered={womenListFiltered}
+        setWomenListFiltered={setWomenListFiltered}
+      />
     </div>
   );
 }
