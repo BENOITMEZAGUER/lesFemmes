@@ -1,6 +1,6 @@
 import "./style.scss";
 
-function Cards({ women, womenIndex, setWomenIndex }) {
+function Cards({ women, womenIndex, setWomenIndex, buttonSuivant }) {
   console.log("women -->", women);
   console.log("women index dans card -->", womenIndex);
   const handleSClick = () => {
@@ -27,15 +27,24 @@ function Cards({ women, womenIndex, setWomenIndex }) {
         </section>
       </div>
       <div>
-        <iframe
-          width="560"
-          height="315"
-          src={women.trailer}
-          allowFullScreen
-        ></iframe>
+        {women.music ? (
+          <iframe
+            style={{ borderRadius: "12px" }}
+            src={women.music}
+            width="80%"
+            height="152"
+          ></iframe>
+        ) : (
+          <iframe
+            width="75%"
+            height="315"
+            src={women.trailer}
+            allowFullScreen
+          ></iframe>
+        )}
         <>
-          <button onClick={handlePClick}>Précédent</button>
-          <button onClick={handleSClick}>Suivant</button>
+          {womenIndex > 0 && <button onClick={handlePClick}>Précédent</button>}
+          {buttonSuivant && <button onClick={handleSClick}>Suivant</button>}
         </>
       </div>
     </div>
