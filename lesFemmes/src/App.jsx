@@ -1,10 +1,11 @@
 import { useState } from "react";
-import Cards from "./components/Cards";
 import "./App.css";
+import Search from "./components/Search";
+import CardsList from "./components/CardsList";
+import Cards from "./components/Cards";
+import NavBar from "./components/NavBar";
 
 function App() {
-  const [womenIndex, setWomenIndex] = useState(0);
-
   const womenList = [
     {
       firstName: "Margot",
@@ -60,14 +61,41 @@ function App() {
       trailer: "https://www.youtube.com/embed/JZDBfmD-ckg?si=EfdoyQ575r40oNIZ",
     },
   ];
+
+  const [womenListFiltered, setWomenListFiltered] = useState(womenList);
+
+  const actrice = womenList.filter((woman) => woman.job === "actrice");
+  const chanteuse = womenList.filter((woman) => woman.job === "chanteuse");
+
   return (
     <>
-      <Cards
-        women={womenList[womenIndex]}
-        setWomenIndex={setWomenIndex}
-        womenIndex={womenIndex}
-        buttonSuivant={womenIndex < womenList.length - 1}
+      <NavBar />
+      <Search
+        arrayOfPeople={womenList}
+        womenListFiltered={womenListFiltered}
+        setWomenListFiltered={setWomenListFiltered}
       />
+      <div>
+        {womenListFiltered &&
+          womenListFiltered.map((woman) => <div>{woman.firstName}</div>)}
+      </div>
+      <>
+        <h2 id="actrices">Les actrices</h2>
+      </>
+      {actrice.map((person) => (
+        <>
+          <Cards women={person} />
+        </>
+      ))}
+      <>
+        <h2 id="chanteuses">Les chanteuses</h2>
+      </>
+      {chanteuse.map((person) => (
+        <>
+          <Cards women={person} />
+        </>
+      ))}
+      ;
     </>
   );
 }
