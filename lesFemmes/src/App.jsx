@@ -1,9 +1,10 @@
 import { useState } from "react";
-
-
-import CardsList from "./components/CardsList";
+import Cards from "./components/Cards";
 import "./App.css";
+
 function App() {
+  const [womenIndex, setWomenIndex] = useState(0);
+  console.log("woman index", womenIndex);
   const womenList = [
     {
       firstName: "Margot",
@@ -61,7 +62,11 @@ function App() {
   ];
   return (
     <>
-      <CardsList womenList={womenList} />
+      <Cards
+        women={womenList[womenIndex]}
+        setWomenIndex={setWomenIndex}
+        womenIndex={womenIndex}
+      />
     </>
   );
 }

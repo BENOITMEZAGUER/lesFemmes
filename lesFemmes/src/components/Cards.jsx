@@ -1,12 +1,22 @@
 import "./style.scss";
-function Cards({ women }) {
+
+function Cards({ women, womenIndex, setWomenIndex }) {
+  console.log("women -->", women);
+  console.log("women index dans card -->", womenIndex);
+  const handleSClick = () => {
+    setWomenIndex(womenIndex + 1);
+  };
+  const handlePClick = () => {
+    setWomenIndex(womenIndex - 1);
+  };
+
   return (
     <div className="card">
       <h2>
         {women.firstName} {women.lastName}
       </h2>
       <div className="parts">
-        <img src={women.image} />
+        <img className="image" src={women.image} />
         <section className="info">
           <p>Date de naissance : {women.birthDate}</p>
           <p>Âge : {women.age} ans</p>
@@ -17,14 +27,16 @@ function Cards({ women }) {
         </section>
       </div>
       <div>
-        ({women.trailer} &&{" "}
         <iframe
           width="560"
           height="315"
           src={women.trailer}
           allowFullScreen
         ></iframe>
-        )
+        <>
+          <button onClick={handlePClick}>Précédent</button>
+          <button onClick={handleSClick}>Suivant</button>
+        </>
       </div>
     </div>
   );
